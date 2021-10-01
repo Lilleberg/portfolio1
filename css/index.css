@@ -1,0 +1,97 @@
+@import "imports/typography.css";
+
+/*general*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body, .show-more {
+  background-color: #212738;
+}
+
+/*header and nav*/
+header, footer {
+  padding: 20px 0 20px 0;
+  background-color: #161a25;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+/*main*/
+main {
+  margin: 40px 0;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 0 30px;
+}
+
+.main-wrapper > section {
+  background-color: #132a47;
+  padding: 20px;
+}
+
+.main-wrapper > section, .show-more {
+  border: 2px solid #2b62aa;
+  border-radius: 10px;
+}
+
+.show-more {
+  padding: 5px 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+section ul {
+  padding-inline-start: 1.3rem;
+}
+
+section ul li {
+  margin-block-start: 0;
+  list-style-type: circle;
+}
+
+/*footer*/
+footer {
+  position: relative;
+}
+
+.to-top {
+  border: none;
+  padding: 0;
+  background-color: #161a25;
+  width: fit-content;
+  width: -moz-fit-content;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
+.to-top i {
+  font-size: 2.2rem;
+}

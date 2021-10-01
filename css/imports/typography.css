@@ -1,0 +1,19 @@
+body * {
+  font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgb(224, 224, 224);
+}
+
+h1, h2, h3, a, .show-more {
+  font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande' 'Verdana';
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a, .links a, .show-more {
+  font-size: 1.2rem;
+}

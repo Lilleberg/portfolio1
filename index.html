@@ -5,46 +5,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Welcome to Maria's portfolio site for the Portfolio 1 course at Noroff.">
+  <script src="https://kit.fontawesome.com/96bb08a331.js"
+    crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Roboto:wght@100;300&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
   <meta name="description" content="My portfolio site for FEU1">
   <title>Portfolio 1</title>
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <nav>
+      <a href="index.html#gamehub">Game Hub</a>
+      <a href="index.html#museum">Community Science Museum</a>
+      <a href="index.html#coffe-overload">Coffee Overload</a>
+    </nav>
+  </header>
 
   <main>
     <h1>Maria's Portfolio</h1>
-    <class="gamehub-section">
-      <h2>Game Hub</h2>
-      <a href="#">GitHub Repository</a>
-      <a href="#">Go to Game Hub</a>
 
-      <section class="changes-made">
-        <h3>Changes Made</h3>
-        <ul>
-          <li></li>
-        </ul>
-      </section>
-      <section class="how-changes">
-        <h3>How the Changes Were Made</h3>
-      </section>
-      <section class="why-changes">
-        <h3>Why I Made the Changes</h3>
-      </section>
-      </section>
-
-      <section class="science-museum-section">
-        <h2>Community Science Museum</h2>
+    <div class="main-wrapper">
+      <section class="gamehub-section" id="gamehub">
+        <h2>Game Hub</h2>
         <a href="#">GitHub Repository</a>
-        <a href="#">Go to Community Science Museum</a>
+        <a href="#">Go to Game Hub</a>
 
         <section class="changes-made">
-          <h3>Changes made</h3>
+          <h3>Changes Made</h3>
           <ul>
             <li></li>
           </ul>
@@ -57,7 +51,104 @@
         </section>
       </section>
 
-      <section class="coffee-overload-section">
+      <section class="science-museum-section" id="museum">
+        <h2>Community Science Museum</h2>
+        <div class="links">
+          <a href="https://github.com/Lilleberg/semproj1-portfolio">GitHub
+            Repository</a>
+          <a href="https://portfolio-semproj1.netlify.app/">Go to Community
+            Science Museum</a>
+        </div>
+
+        <button class="show-more">View more</button>
+        <span class="show-more-container">
+          <section class="changes-made">
+            <h3>Changes made</h3>
+            <ul>
+              <li>Removed the gradient in the background.</li>
+              <li>Changed the cross-over between headings and navigation on
+                Explore.html.</li>
+              <li>Added smooth scroll behavior.</li>
+              <li>Edited the width of the content on all pages.</li>
+              <li>Added alt text on the logo, as well as changed the logo a
+                little bit.</li>
+              <li>Edited the navigation on desktop, and changed the
+                hamburger
+                menu from a checkbox to a button. The navigation will also
+                close if tou click outside it on the main section.</li>
+              <li>Removed non-working search field.</li>
+              <li>Changed the contact form a little bit, and added form
+                validation it.</li>
+              <li>Cleaned up the HTML a bit.</li>
+            </ul>
+          </section>
+
+          <section class="how-changes">
+            <h3>How the Changes Were Made</h3>
+            <ul>
+              <li>The heading/navigation cross-over were separated. Now the
+                section navigation instead sticks to the top of the screen
+                when
+                scrolling.</li>
+              <li>The smooth scroll behavior was set on the html to work on
+                the
+                navigation mentioned above.</li>
+              <li>The width of the content was lessened, as it was a bit
+                wide
+                before.</li>
+              <li>The desktop navigation had an underline when active
+                before,
+                and a white background. Now it's more in style with the
+                active
+                page with colour and placement.</li>
+              <li>The previously used checkbox hack for the hamburger menu
+                is
+                now a button that uses JavaScript to work by an onclick
+                function checking if it's displayed as block or none.</li>
+              <li>Form validation was added with JavaScript, checking that
+                emails have the right format, and that the input fields
+                have
+                a
+                minimum length.</li>
+            </ul>
+          </section>
+
+          <section class="why-changes">
+            <h3>Why I Made the Changes</h3>
+            <ul>
+              <li>Feedback on the project said the pages without gradient
+                were
+                easier to read. I agree.</li>
+              <li>Feedback said the cross-over between heading and
+                navigation
+                wasn't very intuitive, so that was changed.</li>
+              <li>The smooth scroll behavior was a tip I got from the
+                feedback
+                on the project, and it does indeed make it better.</li>
+              <li>The width of the content felt a bit too wide on desktops,
+                which is why that was changed.</li>
+              <li>I changed the way the active links on the pages look
+                because
+                it was a bit boring. I feel like it now fits better with
+                the
+                target audience and the theme.</li>
+              <li>The form was changed to look a bit better. Form
+                validation
+                is
+                also good to have on forms.</li>
+              <li>The HTML had some semantic problems: there were sections
+                without headings; the fake links were paragraphs instead of
+                links (feedback on project); the footer headings didn't use
+                any
+                heading tag, so I changed all that. On one page I had two
+                H1's
+                as well, now there's only one.</li>
+            </ul>
+          </section>
+        </span>
+      </section>
+
+      <section class="coffee-overload-section" id="coffee-overload">
         <h2>Coffee Overload</h2>
         <a href="#">GitHub Repository</a>
         <a href="#">Go to Coffee Overload</a>
@@ -75,10 +166,17 @@
           <h3>Why I Made the Changes</h3>
         </section>
       </section>
-
+    </div>
   </main>
 
-  <footer></footer>
+  <footer>
+    <nav>
+      <a href="index.html#gamehub">Game Hub</a>
+      <a href="index.html#museum">Community Science Museum</a>
+      <a href="index.html#coffe-overload">Coffee Overload</a>
+    </nav>
+    <button class="to-top"><i class="far fa-caret-square-up"></i></button>
+  </footer>
 </body>
 
 </html>

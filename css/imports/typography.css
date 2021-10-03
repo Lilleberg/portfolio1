@@ -6,7 +6,7 @@ body * {
 }
 
 h1, h2, h3, a {
-  font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande' 'Verdana';
+  font-family: 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
 }
 
@@ -20,4 +20,49 @@ header nav a {
 
 .links a {
   font-style: italic;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.hamb-menu i {
+  font-size: 1.5rem;
+}
+
+.to-top i {
+  font-size: 2.2rem;
+}
+
+@media only screen and (min-width: 122em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p, li, a, nav li a {
+    font-size: 1.4rem;
+  }
+
+  .main-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  nav li a {
+    font-size: 1rem;
+  }
+
+  .to-top i {
+    font-size: 2rem;
+  }
 }

@@ -1,43 +1,7 @@
 @import "imports/typography.css";
-
-/*general*/
-body {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #212738;
-}
-
-/*header and nav*/
-header, footer {
-  padding: 20px 0 20px 0;
-  background-color: #161a25;
-}
-
-header {
-  position: sticky;
-  top: 0;
-}
-
-nav {
-  display: flex;
-  gap: 100px;
-  justify-content: center;
-}
+@import "imports/global.css";
 
 /*main*/
-main {
-  padding: 40px;
-  min-height: calc(100vh - 210px);
-  min-height: -moz-calc(100vh - 210px);
-}
-
 h1 {
   margin: 0 0 40px 0;
   text-align: center;
@@ -84,7 +48,7 @@ h1 {
   "links links links"
   "changes how-changes why-changes";
   column-gap: 40px;
-  background-color: #132a47;
+  background-color: #122a47;
   border: 2px solid #2b62aa;
   border-radius: 10px;
   padding: 20px;
@@ -99,20 +63,51 @@ section ul li {
   list-style-type: circle;
 }
 
-/*footer*/
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-.to-top {
-  border: none;
-  padding: 0;
-  background-color: #161a25;
-  width: fit-content;
-  width: -moz-fit-content;
+@media only screen and (max-width: 75em) {
+  .main-wrapper > section {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "h2"
+    "links"
+    "changes"
+    "how-changes"
+    "why-changes";
+  }
+
+  .main-wrapper > section > * {
+    max-width: 60%;
+    justify-self: center;
+  }
 }
 
-.to-top i {
-  font-size: 2.2rem;
+@media only screen and (max-width: 62.5em) {
+  .main-wrapper > section > * {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .main-wrapper > section > * {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  main {
+    padding: 0 20px;
+  }
+
+  .main-wrapper > section {
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 20px 0;
+  }
+
+  .main-wrapper .links {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
 }

@@ -1,0 +1,29 @@
+@media only screen and (max-width: 75em) {
+
+  .main-wrapper > section {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "h2"
+    "links"
+    "changes"
+    "how-changes"
+    "why-changes";
+  }
+
+  .main-wrapper > section > * {
+    max-width: 60%;
+    justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .main-wrapper > section > * {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .main-wrapper > section > * {
+    max-width: 100%;
+  }
+}

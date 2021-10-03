@@ -6,11 +6,11 @@ body {
   padding: 0;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
-body, .show-more {
+body {
   background-color: #212738;
 }
 
@@ -33,38 +33,61 @@ nav {
 
 /*main*/
 main {
-  margin: 40px 0;
+  padding: 40px;
+  min-height: calc(100vh - 210px);
+  min-height: -moz-calc(100vh - 210px);
 }
 
-h1, h2 {
-  text-align: center;
+h1 {
   margin: 0 0 40px 0;
+  text-align: center;
 }
 
 .main-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  padding: 0 30px;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/*grid for each site*/
+.main-wrapper h2 {
+  grid-area: h2;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.main-wrapper .links {
+  grid-area: links;
+  display: flex;
+  place-content: center;
+  gap: 70px;
+  margin-bottom: 20px;
+}
+
+.main-wrapper .changes-made {
+  grid-area: changes;
+}
+
+.main-wrapper .how-changes {
+  grid-area: how-changes;
+}
+
+.main-wrapper .why-changes {
+  grid-area: why-changes;
 }
 
 .main-wrapper > section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  "h2 h2 h2"
+  "links links links"
+  "changes how-changes why-changes";
+  column-gap: 40px;
   background-color: #132a47;
-  padding: 20px;
-}
-
-.main-wrapper > section, .show-more {
   border: 2px solid #2b62aa;
   border-radius: 10px;
-}
-
-.show-more {
-  padding: 5px 10px;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
 }
 
 section ul {
@@ -78,18 +101,16 @@ section ul li {
 
 /*footer*/
 footer {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
-
 .to-top {
   border: none;
   padding: 0;
   background-color: #161a25;
   width: fit-content;
   width: -moz-fit-content;
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
 }
 
 .to-top i {

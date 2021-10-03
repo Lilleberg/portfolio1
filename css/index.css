@@ -94,7 +94,7 @@ section ul li {
 
 @media only screen and (max-width: 31.25em) {
   main {
-    padding: 0 20px;
+    padding: 0 10px 20px 10px;
   }
 
   .main-wrapper > section {

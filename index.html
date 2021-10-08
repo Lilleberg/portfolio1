@@ -257,6 +257,7 @@
             <li>Cleaned up CSS a little bit (more could be done with time).
             </li>
             <li>Added comment section.</li>
+            <li>Contact form data is stored in WordPress.</li>
           </ul>
         </section>
         <section class="how-changes">
@@ -295,6 +296,29 @@
                 the comment section on submit. So to view it the page has
                 to be refreshed.</p>
             </li>
+            <li>
+              <p>To store the contact form data in WordPress, I followed a
+                tutorial on CSS tricks. It's heading was exactly what I was
+                looking for. The first step was adding the Contact Form 7
+                plugin, and connect my contact form to this one.</p>
+              <p>It took me some googling to realise that Contact Form 7
+                doesn't store data, but it has a plugin friend called
+                Flamingo which does. So I didn't really know if my function
+                to post the data worked until I had Flamingo up and
+                running.</p>
+              <p>So eventually I ended up with a bit of the code from the
+                CSS trick page, the most necessary to actually post, and I
+                added the code I already have with a success message. To
+                get the data from the form, I first create a form element,
+                which targets the action and method from the form, then
+                create new FormData which is the body. So this makes sense,
+                the data is stored and the fetch posts the data.</p>
+              <p>I still didn't think it worked, so I went to the Flamingo
+                plugin on my WordPress to see if I had missed any settings
+                or anything, but to my surprise there suddenly was
+                something there. Turns out it worked after all. And now the
+                contact form data is stored in my WordPress.</p>
+            </li>
           </ul>
         </section>
         <section class="why-changes">
@@ -312,6 +336,10 @@
               the most necessary feature to add. I didn't think I was able
               to make it work at all first, but the hours paid off
               eventually.</li>
+            <li>Usually a contact form is sent somewhere so someone can
+              reply, and for this project the level 2 process was (for me)
+              a bit of a challenge I wanted to try to make work. So it's a
+              good functionality to have on a site.</li>
           </ul>
         </section>
       </section>

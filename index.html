@@ -38,30 +38,105 @@
     <h1>Maria's Portfolio</h1>
 
     <div class="main-wrapper">
+
       <section class="gamehub-section" id="gamehub">
         <h2>Game Hub</h2>
 
         <div class="links">
-          <a href="#">GitHub Repository</a>
-          <a href="#">Go to Game Hub</a>
+          <a href="https://github.com/Lilleberg/gamehub-portfolio"
+            target="_blank">GitHub Repository</a>
+          <a href="https://gamehub-portfolio-mh.netlify.app/index.html"
+            target="_blank">Go to Game Hub</a>
         </div>
 
         <section class="changes-made">
           <h3>Changes Made</h3>
           <ul>
-            <li></li>
+            <li>Added used games and new games pages.</li>
+            <li>Cleaned up the HTML a little bit (though more could be
+              done).</li>
+            <li>Tried to clean up the CSS a little bit.</li>
+            <li>Fixed meta descriptions.</li>
+            <li>Set a min height on the main section to always fill the
+              page.</li>
+            <li>Restructured the shopping cart code. It wasn't working
+              correctly at all.</li>
+            <li>Added a dot showing amount of products in cart on the cart
+              icon.</li>
           </ul>
         </section>
         <section class="how-changes">
           <h3>How the Changes Were Made</h3>
           <ul>
-            <li></li>
+            <li>To set a minimum height on the pages, I just the calc()
+              function in CSS. I set the main section to be 100vh minus ca.
+              the pixel height of header and footer.</li>
+            <li>
+              <p>The shopping cart code now works across pages. This
+                wouldn't be possible without help from fellow students. In
+                cart.js there is an if/else to check if localStorage is
+                empty
+                or not. If it's empty a new array is created for the
+                products. The cart has a function that loops through what
+                is in localStorage, and then creates HTML, as well as keep
+                track of the price.</p>
+              <p>Since add to cart buttons are created in HTML, the onclick
+                function is now inside the API call function. This is to
+                have access to the buttons.
+                The buttons have a data attribute which holds the product's
+                ID. When the button is clicked a find() function is used to
+                find the product based on the ID, from the API call. The
+                products is then added to the array that belongs to
+                localStorage.</p>
+              <p>To get the shopping cart to update immediately when a
+                products is added, I have called the function from the cart
+                that creates HTML inside the button click functions. But
+                since that cart function creates HTML, I had to make a call
+                to the function before button is clicked (have it updated
+                if one goes to another page), then inside the button click
+                function I reset the HTML and price, and then made a new
+                call to create the HTML based on what's in localStorage.
+                This way I didn't get any HTML duplicates, and the cart is
+                updated across pages.</p>
+              <p>I added the same empty innerHTML/function call into the
+                global.js file to keep it
+                updated on pages that don't have any products on them.</p>
+            </li>
+            <li>For the amount of products in cart visibility on the cart
+              icon, I just placed a div around the cart icon and a span.
+              Position relative on the div, and position absolute on the
+              span. Then I used JavaScript and checked the length of what
+              was inside the cart (key) in localStorage, and added that as
+              the span's innerHTML.</li>
           </ul>
         </section>
         <section class="why-changes">
           <h3>Why I Made the Changes</h3>
           <ul>
-            <li></li>
+            <li>I added the pages for used games and new games so the site
+              is more complete.</li>
+            <li>The HTML isn't as semantic as it could be here and there
+              because this was the first project. I changed it some places,
+              where I have been working and saw things. If I had time, I'd
+              rather write it all over again.</li>
+            <li>Since this was the first project, my CSS is a bit chaotic,
+              I would need a lot more time to clean it up properly.</li>
+            <li>I didn't really fully understand meta descriptions at
+              first, so that's why I fixed these, they are now better
+              descriptions. As well as changed the
+              meta description with JavaScript on the product specific
+              pages to fit the product.</li>
+            <li>A site for shopping needs a functioning shopping cart. And
+              I really wanted to make it work. It was a fun way to learn
+              how localStorage works. Again I need to mention that this
+              would not have been working if I didn't have help with how to
+              structure my code. A cart also usually has an indicator of
+              how many items it's holding, so I had to add that.</li>
+            <li>Note: There are still things to be fixed for it to be a
+              very good site, but the cart took much of my time with all
+              the trial and error (and also didn't have time to figure out
+              how to solve how to have a quantity counter if the same
+              product is added more than once).</li>
           </ul>
         </section>
       </section>
@@ -73,7 +148,7 @@
           <a href="https://github.com/Lilleberg/semproj1-portfolio"
             target="_blank">GitHub
             Repository</a>
-          <a href="https://portfolio-semproj1.netlify.app/"
+          <a href="https://portfolio-semproj1.netlify.app/index.html"
             target="_blank">Go to Community
             Science Museum</a>
         </div>
@@ -167,26 +242,76 @@
         <h2>Coffee Overload</h2>
 
         <div class="links">
-          <a href="#">GitHub Repository</a>
-          <a href="#">Go to Coffee Overload</a>
+          <a href="https://github.com/Lilleberg/coffeeOverload-portfolio"
+            target="_blank">GitHub Repository</a>
+          <a href="https://projectexam1-portfolio-mh.netlify.app/index.html"
+            target="_blank">Go to Coffee Overload</a>
         </div>
 
         <section class="changes-made">
           <h3>Changes made</h3>
           <ul>
-            <li></li>
+            <li>Edited the way I added products to the HTML through the API
+              call on the posts page with the "view more" button. And then
+              edited the grid on the desktop version.</li>
+            <li>Cleaned up CSS a little bit (more could be done with time).
+            </li>
+            <li>Added comment section.</li>
           </ul>
         </section>
         <section class="how-changes">
           <h3>How the Changes Were Made</h3>
           <ul>
-            <li></li>
+            <li>Since the API has a set order on the posts (when they're
+              published), it was possible to read the first 10 posts on the
+              posts page, and then start a new for loop where the counter
+              starts at 10.</li>
+            <li>
+              <p>The comment section was not an easy task, and has resulted
+                in hours of googling, trying and failing. I was trying to
+                do
+                what some examples were doing to save the form data with
+                fetch() and .then/.catch, but only
+                got errors. After looking some more on the comment API, I
+                then realised I had the wrong property for ID when saving
+                the data as an object. But still got errors. Some error
+                were about the comments not having a post, and others about
+                authentication.</p>
+              <p>I then ended up googling "fetch body" because I was trying
+                to understand how another code online worked, which somehow
+                showed me a different code snippet which seemed to sort of
+                do the same as I had tried. This code used async, and was a
+                bit different than the form submission code snippets I had
+                already seen, but I tried and it worked. No errors, and
+                comments showed up in wordpress.</p>
+              <p>The values from the inputs as well as post ID is stored as
+                an object, and then the data is stringified and added to
+                the body property. All this was new to me, so I am still
+                learning how posting data works.</p>
+              <p>To add the comments into the site was easy, as I just did
+                a normal API call (the way we have learned) to the comments
+                link, and created HTML with the properties I wanted.</p>
+              <p>Note: One change I have not figured out is how to update
+                the comment section on submit. So to view it the page has
+                to be refreshed.</p>
+            </li>
           </ul>
         </section>
         <section class="why-changes">
           <h3>Why I Made the Changes</h3>
           <ul>
-            <li></li>
+            <li>I changed the way I add the HTML to the posts page, because
+              I didn't have a good solution before (got a tip on how to do
+              this one). So with the new way I could have the posts shown
+              on the desktop version as I had intended.</li>
+            <li>My CSS (and HTML as well) is not perfect. So I try
+              to clean it up, keep the CSS DRY and neat, and HTML semantic,
+              if I come across things while working on the page. There is
+              more that can be cleaned up if there was more time.</li>
+            <li>A blog usually has a comment section, so I felt this was
+              the most necessary feature to add. I didn't think I was able
+              to make it work at all first, but the hours paid off
+              eventually.</li>
           </ul>
         </section>
       </section>

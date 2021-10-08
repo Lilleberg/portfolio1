@@ -63,6 +63,7 @@ header, footer, nav ul {
   background-color: #161a25;
   width: fit-content;
   width: -moz-fit-content;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 48em) {

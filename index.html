@@ -169,7 +169,7 @@
               close if you click outside it on the main section.</li>
             <li>Removed non-working search field.</li>
             <li>Changed the contact form a little bit, and added form
-              validation it.</li>
+              validation to it.</li>
             <li>Cleaned up the HTML a bit.</li>
           </ul>
         </section>
@@ -208,32 +208,24 @@
           <h3>Why I Made the Changes</h3>
           <ul>
             <li>Feedback on the project said the pages without gradient
-              were
-              easier to read. I agree.</li>
+              were easier to read. I agree.</li>
             <li>Feedback said the cross-over between heading and
-              navigation
-              wasn't very intuitive, so that was changed.</li>
+              navigation wasn't very intuitive, so that was changed.</li>
             <li>The smooth scroll behavior was a tip I got from the
-              feedback
-              on the project, and it does indeed make it better.</li>
+              feedback on the project, and it does indeed make it better.
+            </li>
             <li>The width of the content felt a bit too wide on desktops,
               which is why that was changed.</li>
             <li>I changed the way the active links on the pages look
-              because
-              it was a bit boring. I feel like it now fits better with
-              the
-              target audience and the theme.</li>
+              because it was a bit boring. I feel like it now fits better
+              with the target audience and the theme.</li>
             <li>The form was changed to look a bit better. Form
-              validation
-              is
-              also good to have on forms.</li>
+              validation is also good to have on forms.</li>
             <li>The HTML had some semantic problems: there were sections
               without headings; the fake links were paragraphs instead of
               links (feedback on project); the footer headings didn't use
-              any
-              heading tag, so I changed all that. On one page I had two
-              H1's
-              as well, now there's only one.</li>
+              any heading tag, so I changed all that. On one page I had two
+              H1's as well, now there's only one.</li>
           </ul>
         </section>
       </section>
@@ -258,6 +250,8 @@
             </li>
             <li>Added comment section.</li>
             <li>Contact form data is stored in WordPress.</li>
+            <li>Added function to display posts based on their category on
+              the posts page.</li>
           </ul>
         </section>
         <section class="how-changes">
@@ -292,9 +286,12 @@
               <p>To add the comments into the site was easy, as I just did
                 a normal API call (the way we have learned) to the comments
                 link, and created HTML with the properties I wanted.</p>
-              <p>Note: One change I have not figured out is how to update
-                the comment section on submit. So to view it the page has
-                to be refreshed.</p>
+              <p>To update the HTML right away when a comment is added, I
+                cleared the HTML and called the function that fetches the
+                comments and creates HTML, inside the function that stores
+                the comments. Also reversed the order of the comments so
+                the latest comment is at the bottom, so one can see their
+                comment is added.</p>
             </li>
             <li>
               <p>To store the contact form data in WordPress, I followed a
@@ -319,6 +316,13 @@
                 something there. Turns out it worked after all. And now the
                 contact form data is stored in my WordPress.</p>
             </li>
+            <li>For the category filter, I created a function that takes
+              two parameters, url and button. Inside it do the API call and
+              then am onclick function that empties the container, and then
+              creates new HTML. I then call the function for every category
+              and pass as arguments the URL's that target the right
+              category, and the button it belongs to.
+            </li>
           </ul>
         </section>
         <section class="why-changes">
@@ -327,7 +331,8 @@
             <li>I changed the way I add the HTML to the posts page, because
               I didn't have a good solution before (got a tip on how to do
               this one). So with the new way I could have the posts shown
-              on the desktop version as I had intended.</li>
+              on the desktop version as I had intended. This way was much
+              more practical.</li>
             <li>My CSS (and HTML as well) is not perfect. So I try
               to clean it up, keep the CSS DRY and neat, and HTML semantic,
               if I come across things while working on the page. There is
@@ -340,6 +345,8 @@
               reply, and for this project the level 2 process was (for me)
               a bit of a challenge I wanted to try to make work. So it's a
               good functionality to have on a site.</li>
+            <li>A blog usually has search and filters, so I wanted mine to
+              at least sort by categories.</li>
           </ul>
         </section>
       </section>
